@@ -7,9 +7,9 @@
 # eBook Downloader for www.yushuwu.com
 # python2 ONLY !
 # Usage : If you don't wanna change the source code,
-#		  Just run `python book.py <book_id>`.
-#		  But in fact, it supports batch processing.
-#		  Find it yourself, 23333.
+#         Just run `python book.py <book_id>`.
+#         But in fact, it supports batch processing.
+#         Find it yourself, 23333.
 
 import sys,os
 import re
