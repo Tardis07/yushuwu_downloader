@@ -85,28 +85,28 @@ def get_context(book_id,page_list,filename):
 	f.close()
 	print '[Downloaded] : ' + str(book_id) + ' Finished !'
 
-# book_id = int(sys.argv[1])
-# page_list = get_pagelist(book_id)
-# filename = get_filename(book_id)
+book_id = int(sys.argv[1])
+page_list = get_pagelist(book_id)
+filename = get_filename(book_id)
 
-# get_context(book_id,page_list,filename)
+get_context(book_id,page_list,filename)
 
-for i in range(20):
-	URL = "https://m.yushuwu.com/tag/sm/p_%d.html" % i
-	r = requests.get(URL, headers=headers)
-	t = r.text
-	li = re.search('<ul id="list_ul">(.+)</ul>',t,re.DOTALL).group()
-	li = li.split('novel')
-	li_1 = []
-	for i in li:
-		if i[6:11] == '.html':
-			li_1.append(i[1:6])
-	# li_1.pop(0)
-	for i in li_1:
-		i = int(i)
-		filename = get_filename(i)
-		page_list = get_pagelist(i)
-		get_context(i,page_list,filename)
+# for i in range(20):
+# 	URL = "https://m.yushuwu.com/tag/sm/p_%d.html" % i
+# 	r = requests.get(URL, headers=headers)
+# 	t = r.text
+# 	li = re.search('<ul id="list_ul">(.+)</ul>',t,re.DOTALL).group()
+# 	li = li.split('novel')
+# 	li_1 = []
+# 	for i in li:
+# 		if i[6:11] == '.html':
+# 			li_1.append(i[1:6])
+# 	# li_1.pop(0)
+# 	for i in li_1:
+# 		i = int(i)
+# 		filename = get_filename(i)
+# 		page_list = get_pagelist(i)
+# 		get_context(i,page_list,filename)
 
 
 # for i in range(7326886,7326967):
